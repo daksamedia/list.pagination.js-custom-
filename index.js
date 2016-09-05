@@ -75,6 +75,8 @@ module.exports = function(options) {
 
     var addEvent = function(elm, i, page) {
        events.bind(elm, 'click', function() {
+           list.lastI = i;
+           list.latPage = page;
            list.show((i-1)*page + 1, page);
        });
     };
